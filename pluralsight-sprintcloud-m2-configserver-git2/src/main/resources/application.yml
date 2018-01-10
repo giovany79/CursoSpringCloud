@@ -1,0 +1,29 @@
+---
+server:
+  port: 8889
+security:
+  basic:
+    enabled: true
+  user:
+    name: pluralsight
+    password: pluralsight
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/giovany79/pluralsight-spring-cloudconfig-wa-tolls
+          #username: name
+          #password: pass
+          search-paths:
+          - 'station*'
+          repos:  
+            perf: 
+              pattern: 
+                - "*/perf"
+              uri: https://github.com/giovany79/spring-cloudconfig-wa-toll-perf
+              search-paths: 
+                - 'station*'
+    
+  
+  
